@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #RHEL subscription credentials pulled from environment variables
-rhel_subscription_user=$RHEL_SUBSCRIPTION_USER
-rhel_subscription_pwd=$RHEL_SUBSCRIPTION_PWD
+rhel_subscription_user=${{ secrets.RHEL_SUBSCRIPTION_USER }}
+rhel_subscription_pwd=${{ secrets.RHEL_SUBSCRIPTION_PWD }}
 
 #checking if environment variables were set
 
