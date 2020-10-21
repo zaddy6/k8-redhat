@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag k8-redhat:latest
+      run: docker build . --file Dockerfile --tag k8-redhat:latest --build-arg RHEL_SUBSCRIPTION_USER=${{secrets.RHEL_SUBSCRIPTION_USER}} --build-arg RHEL_SUBSCRIPTION_PWD=${{secrets.RHEL_SUBSCRIPTION_PWD}}
